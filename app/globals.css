@@ -29,7 +29,10 @@ body {
   background: #ffa3a3;
 }
 .home {
-  background-image: url("https://img.freepik.com/free-vector/valentines-day-greeting-with-paper-style-hanging-hearts-text-space_1017-42223.jpg?w=900&t=st=1707171864~exp=1707172464~hmac=afdddbadc48a90c557c19623fce4a1a5d496903a6b99e0b0ab1247776fbb85b6");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://img.freepik.com/free-photo/delicious-heart-shaped-sweets_23-2149066148.jpg?w=360&t=st=1707176077~exp=1707176677~hmac=5ce24f47cee6fb45aa0a0a341fa4b8d8e0a70fe7f9a9944d264e133111e1ee52");
 }
 .balloon {
   display: inline-block;
@@ -80,4 +83,12 @@ body {
 @keyframes balloons {
   0%,100%{ transform:translateY(0) rotate(-4deg); }
   50%{ transform:translateY(-250px) rotate(4deg); }
+}
+@media screen and (min-width: 992px) {
+  .home {
+    background-repeat: repeat-x;
+    background-position: unset;
+    background-size: unset;
+    background-image: url("https://img.freepik.com/free-vector/valentines-day-greeting-with-paper-style-hanging-hearts-text-space_1017-42223.jpg?w=900&t=st=1707171864~exp=1707172464~hmac=afdddbadc48a90c557c19623fce4a1a5d496903a6b99e0b0ab1247776fbb85b6");
+  }
 }
