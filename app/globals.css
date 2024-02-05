@@ -18,16 +18,66 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+.bg-love {
+  background: #ffa3a3;
+}
+.home {
+  background-image: url("https://img.freepik.com/free-vector/valentines-day-greeting-with-paper-style-hanging-hearts-text-space_1017-42223.jpg?w=900&t=st=1707171864~exp=1707172464~hmac=afdddbadc48a90c557c19623fce4a1a5d496903a6b99e0b0ab1247776fbb85b6");
+}
+.balloon {
+  display: inline-block;
+  width: 70px;
+  height: 95px;
+  background: rgb(252, 90, 90);
+  border-radius: 80%;
+  position: relative;
+  box-shadow: inset -10px -10px 0 rgba(0,0,0,0.07);
+  margin:20px 20px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloons 4s ease-in-out infinite;
+  transform-origin:bottom center;
+  opacity: 0.7;
+}
+
+.balloon:before {
+  content:"▲";
+  font-size:20px;
+  color:hsl(0, 52%, 46%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-17px;
+  z-index:-100;
+}
+
+.balloon:after {
+  display:inline-block; 
+  top:100px;
+  left: 34px;
+  position:absolute;
+  height:100px;
+  width:1px;
+  margin:0 auto;
+  content:"";
+  background:rgba(0,0,0,0.2); 
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes balloons {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(-250px) rotate(4deg); }
 }
