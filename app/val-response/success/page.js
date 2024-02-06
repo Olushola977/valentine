@@ -1,5 +1,10 @@
+'use client'
+
+import useWindowSize from "@rooks/use-window-size"
+
 export default function Home() {
-  const numberOfBalloons = 10;
+  const { innerWidth } = useWindowSize();
+  const numberOfBalloons = innerWidth < 999 ? 6 : 10;
 
   return (
     <main className="flex h-full w-full items-center justify-center bg-love">
