@@ -25,6 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
 .bg-love {
   background: #ffa3a3;
 }
